@@ -58,6 +58,11 @@ export class FormField {
    */
   required?: boolean;
 
+  /**
+   * Not implemented
+   */
+  maxLen?: number;
+
   constructor(formId: string, state: FormFieldProps = {}) {
     this.formId = formId;
     this.id = numFormFields.toString();
