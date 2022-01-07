@@ -6,6 +6,7 @@ export const FormFieldTypes = {
   File: "file",
 };
 
+// Could be auto incremented primary key in DB
 let numFormFields = 0;
 
 export interface FormFieldProps {

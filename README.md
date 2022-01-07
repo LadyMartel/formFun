@@ -1,4 +1,8 @@
+## Readme
+
 I liked the simplicity of Google Forms, where (at least what I noticed from it) it was easy to set branching logic to go to the next section. I took a brief look at [react-jsonschema-form](https://react-jsonschema-form.readthedocs.io/en/latest/) but found it a bit too complex to grok for this proof of concept.
+
+I started making some react components just to have a more solid visualization of the final product but found it took too long to get anything working, plus, it was pretty boiler-plate React. I also set this project up to have express so I could have my react app talk to the server but that was more for my own fun than anything else.
 
 Here are my thoughts on the UI that I've jotted down.
 
@@ -12,13 +16,13 @@ For example, if you have a question that is "do you have a pet?" if they answer 
 
 I made some objects to model the data. The first thing I needed to differentiate was a Form vs FormResponse. A FormResponse would be tied to a particular Form and the answers would be tied to a particular FormField. FormField represents a single input or question which can be of one of many types specified. I put "required" as a property of each FormFeld. FormResponses submitted missing an answer for a FormField that is required can't be submitted. (Or would come back with validdation errors)
 
-Open Questions
+I tried to simplify my mental model of the UI as much as possible to single question, linear progress, so that one question would only show after another. Things like reordering questions or grouping questions together were considered but not built.
+
+## Open Questions
 
 - more complex conditionals, like "any of", "one of", "all of"
 - how to implement the logic of "if you filled out any value in this text box now this next field is required". Maybe this could be achieved with a nested structure.
 - branching form field that is also required (of the responder goes down only that particular branch)
 - multi select or checkboxes
-
-I tried to simplify my mental model of the UI as much as possible to single question, linear progress, so that one question would only show after another. Things like reordering questions or grouping questions together were considered but not built.
 
 This is a really open ended question and it was fun to think about. Regardless of whether or not this was what you were looking for it was fun!

@@ -1,5 +1,6 @@
 import { FormField } from "./FormField";
 
+// Could be auto incremented primary key in DB
 let numForms = 0;
 
 export class Form {
